@@ -1,0 +1,105 @@
+body {
+    background-color: #525252;
+    font-family: Zen Dots, sans-serif;
+    color: white;
+    margin: 0;
+}
+
+nav {
+    background-color: #222;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 140ms ease, color 140ms ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(65, 98, 231, 0.10);
+    color: #90b0ff;
+}
+
+
+/* Titel */
+.title {
+    font-size: 3rem;
+    margin: 30px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px;
+    gap: 40px;
+}
+
+/* Bubbels */
+.bubble {
+    width: 80px;
+    height: 80px;
+    background: #cfcfcf;
+    border-radius: 50%;
+    animation: float 4s ease-in-out infinite;
+}
+.small {
+    width: 70px;
+    height: 70px;
+}
+
+/* Stickers */
+.sticker {
+    width: 240px;
+    height: 240px;
+    background: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    animation: float 3.5s ease-in-out infinite;
+    transition: 0.3s ease;
+}
+
+.sticker img {
+    width: 90%;
+}
+
+/* Hover effecten */
+.sticker:hover {
+    transform: scale(1.12) rotate(4deg);
+    box-shadow: 0 0 18px rgba(255,255,255,0.5);
+}
+
+/* Telefoon schuiner */
+.rotate { transform: rotate(15deg); }
+
+/* Zweef animatie */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
